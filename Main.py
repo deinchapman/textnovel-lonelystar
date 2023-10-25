@@ -14,14 +14,14 @@ text3v2 = ("\n- If you ask \"me\" a lonely star,\nThe moon didn't gave you anyth
 
 print(intro)
 print()
-answer = input("Input anything to continue:")
+answer = input("press enter to continue:")
 if answer == 1: 
     print(text1v1) 
     
 else:
     print(text1v1)
     
-answer = input("Input anything to continue:")
+answer = input("press enter to continue:")
 if(1):
     print(text2v1)
 else:
@@ -43,13 +43,13 @@ while True:
         print("Invalid input")
     continue
 
-answer = input("Input anything to continue:")
+answer = input("press enter to continue:")
 if(1):
     print(text2v2)
 else:
     print(text2v2)
         
-answer = input("Input anything to continue:")
+answer = input("press enter to continue:")
 if(1):
     print(text3v2)
 else:
