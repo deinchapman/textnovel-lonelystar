@@ -1,68 +1,57 @@
-intro = ("\nOnce again,\nyou,\nthe \"Mortificado\",\na being that has experience nothing else but suffer in his life,\nhas once again experienced a new calamity.\nAt this point...\nyou just want to go to your especial place;\n...and talk with the only being that you feel that listens to you...\n")
+def restart():
+    answer = input("\nPresiona enter para volver a empezar.\n")
+    if answer == 0:
+        main()
 
-text1v1 = ("\nToday you went out to look for the moon as you always do.\nYou only wish to the least being able to delight yourself with it's beauty.\n")
+    else:
+        main()
 
-text2v1 = ("\nWhile you try to look at the sky,\nit seems that you cannot be able to find the moon by nowhere you try to look at;\nnevertheless... the one thing you could find is a lonely star,\nthat only because of it's lonliness you let yourself notice it's poor shine.\n")
 
-endingSimp = ("\nYou just ignored the star,\nand went on to keep looking for the moon,\nno matter how much it does cost you to find it,\neven if you've lost yourself,\nyou'll keep chase her for forever.\n \n \n Ending S: [S]imp walking")
-
-text1v2 = ('\nThe Lonely Star answers to your shouts with another question: \n- I\'m the one who wants to ask,\n"Moritificado";\nIs it worth go looking for it? -\n')
-               
-text2v2 = ("\n- Just try to call and shout her name,\nI just wanna let you know that if nobody answers,\nit's because nobody cares -\n")
-
-text3v2 = ("\n- If you ask \"me\" a lonely star,\nThe moon didn't gave you anything back.\nThe moon is not worth the effort it's my conclusion,\n\"Mortificado\" my friend...\nNever mind it's beauty,\nif you were to go chasing behind her,\nyou'd be at garbage time -\n \n \n Ending R: [R]eality Check")
-
-print(intro)
-print()
-answer = input("press enter to continue:")
-if answer == 1: 
-    print(text1v1) 
-    
-else:
-    print(text1v1)
-    
-answer = input("press enter to continue:")
-if(1):
-    print(text2v1)
-else:
-    print(text2v1)
-
-while True:
-    try:    
-        answer = input("Try to shout at the star where can you find the moon? (yes/no):")
-
-        if answer.lower() == "no":
-            print(endingSimp)
-            exit()
+def main():
+        name = input("Muchas gracias venir, ¿Me puedes dar tu Nombre por favor?: ")
+        print("\nHola", name)
         
-        elif answer.lower() == "yes":
-            print(text1v2)
-            break
-              
-    except Exception:
-        print("Invalid input")
-    continue
-
-answer = input("press enter to continue:")
-if(1):
-    print(text2v2)
-else:
-    print(text2v2)
+        lover = input("Me puedes llamar lo más te guste, ¿Cómo te gustaría llamarme?\n")
         
-answer = input("press enter to continue:")
-if(1):
-    print(text3v2)
-else:
-    print(text3v2)
+        print("\n",lover + ":","¿Te puedo hacer una pregunta? Solo dime que si o no por favor\n")
+        answer = input()
+
+        if answer == ("no"): 
+            print("\n",lover + ":","Lo siento mucho, no te volvere a molestar\n")
+            print("\nFinal neutral 1: No volveras a ser molestado\n") 
+            restart()
+            
+        elif answer == ("si"):
+            print("\n",lover + ":","Me da pena pero... ¿podemos ir a comer un helado juntos? *Puedes escuchar entre murmuros como solo espera que le responde o que ¨si¨ o que ¨no¨\n")
+            answer = input()
+        else:  
+            print("\n",lover + ":","Mejor olvidalo, no es nada\n")
+            print ("\nFinal neutral 2: Al final no era nada\n")
+            restart()
+        
+        if answer == ("no"):
+            print("\n",lover + ":","Ou... esta bien, siento mucho las molestias\n")
+            print("\nFinal malo: Te terminaste quedando solo e insatisfecho\n")
+            restart()
+        elif answer == ("si"):
+            print("\n",lover + ":","Oh ¿En serio? ¡Entonces no hay tiempo que perder!\n")
+            print("\nLas estrellas del destino te juzgan ¿Genuinamente quieres pasar tiempo con esta persona? *Sientes que solo puedes responder ¨si¨ o ¨no¨ a esta pregunta\n")
+            answer = input()
+            if answer == ("si"):
+                print("\nFinal bueno: La mejor tarde de tu vida\n")
+            elif answer == ("no"):
+                print("\nFinal hipócrita: A pesar de que en un principio respondiste que si; era evidente para la otra persona que realmente no querias estar con ella, y antes de que te dieras cuenta, simplemente se despidieron para nunca volverse a ver\n")
+                restart()
+            else: 
+                print("\nFinal del mas allá: Independientemente de tu respuesta, te distrajiste demasiado hablando con seres que van mas allá de tu comprensión, y terminaste siendo atropellado por un camión, justo en frente de los ojos de la otra persona.\n")
+                restart()
+
+        else:
+            print("\nUhm... pensandolo mejor, creo que no tengo ganas... mejor otro dia\n")
+            print("\nFinal indeciso: No eres tu, tampoco es la otra persona, algunas veces simplemente no sentimos la confianza de dar ese proximo paso en la relacion\n")
+        restart()
+
+main()
 
 
     
-    
-
-    
-    
-    
-    
-    
-
-
